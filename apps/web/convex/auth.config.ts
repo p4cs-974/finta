@@ -1,4 +1,4 @@
-import type { AuthConfig } from "convex/server";
+import { AuthConfig } from "convex/server";
 
 export default {
   providers: [

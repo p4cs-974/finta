@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import {
+import type {
   ColumnDef,
   ColumnFiltersState,
   SortingState,
+} from '@tanstack/react-table'
+import {
   flexRender,
   getCoreRowModel,
   getFilteredRowModel,
