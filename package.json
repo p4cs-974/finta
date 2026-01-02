@@ -1,0 +1,9 @@
+{
+  "name": "finta",
+  "private": true,
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "bun run --filter web dev",
+    "build": "bun run --filter web build"
+  }
+}
