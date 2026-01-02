@@ -1,7 +1,15 @@
-import { RedirectToSignIn } from '@clerk/clerk-react'
-import { Authenticated, Unauthenticated, AuthLoading } from 'convex/react'
-import { Outlet } from 'react-router-dom'
-import { AppShell } from '@/components/app-shell'
+import { RedirectToSignIn } from "@clerk/clerk-react";
+import { Authenticated, Unauthenticated, AuthLoading } from "convex/react";
+import { Outlet } from "react-router-dom";
+import { AppShell } from "@/components/app-shell";
+
+function AuthenticatedApp() {
+  return (
+    <AppShell>
+      <Outlet />
+    </AppShell>
+  );
+}
 
 export default function AppLayout() {
   return (
@@ -12,13 +20,11 @@ export default function AppLayout() {
         </div>
       </AuthLoading>
       <Authenticated>
-        <AppShell>
-          <Outlet />
-        </AppShell>
+        <AuthenticatedApp />
       </Authenticated>
       <Unauthenticated>
         <RedirectToSignIn />
       </Unauthenticated>
     </>
-  )
+  );
 }
