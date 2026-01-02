@@ -1,6 +1,6 @@
 {
     "scripts": {
-        "setup": "bun install && ln -s \"$CONDUCTOR_ROOT_PATH/.env\" .env",
+        "setup": "bun install && cp \"$CONDUCTOR_ROOT_PATH/apps/web/.env.local\" apps/web/.env.local",
         "run": "bun dev"
     }
 }
